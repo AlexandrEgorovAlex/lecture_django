@@ -6,5 +6,11 @@ from django.shortcuts import render
 def index(request):
     return HttpResponse("Hello, world!")       
 
-def index(request):
+def sasha(request):
     return HttpResponse("Hello, Sasha!")
+
+def david(request):
+    return HttpResponse("Hello, David!")
+
+def greet(request, name):
+    return HttpResponse(f"Hello, {name.capitalize()}!")
