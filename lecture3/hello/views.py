@@ -12,5 +12,12 @@ def sasha(request):
 def david(request):
     return HttpResponse("Hello, David!")
 
+"""
 def greet(request, name):
     return HttpResponse(f"Hello, {name.capitalize()}!")
+"""
+
+def greet(request, name):
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize(),
+        })
